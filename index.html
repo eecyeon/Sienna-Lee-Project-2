@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="poppins-medium">Log in</h1>
+    <div class="input-container">
+        <label for="username" class="poppins-regular">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter username">
+    </div>
+    <div class="input-container">
+        <label for="password" class="poppins-regular">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter password">
+    </div>
+    <script src="test.js"></script>
+
+<!--actual stuff-->
+    <div class="robot-container">
+        <div class="input-captcha">
+            <input type="checkbox" name=" checkbox" id="checkbox"value="html">
+            <label for="checkbox" class="poppins-regular">I'm not a robot</label>
+            <img class="captcha-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/640px-RecaptchaLogo.svg.png" alt="captcha"></image>
+        </div>
+        <!-- Selection of prompts-->
+        <div class="selection-container">
+            <label for="selection" class="poppins-light">Select a prompt to write about:</label>
+            <select id="selection" name="selection">
+                <option value="yes">Why did you join our website?</option>
+                <option value="yes">Which movie did you regret watching this year?</option>
+                <option value="yes">What are you wearing?</option>
+                <option value="yes">What is the meaning of life?</option>
+                <option value="yes">Who made you feel upset when you were a child?</option>
+                <option value="yes">What are some choices you made in the past that you regret now?</option>
+            </select>
+        </div>
+
+        <!--Writing block-->
+        <div class="writing-block">
+            <textarea placeholder="Write your response to the prompt." class="poppins-light"></textarea>
+        </div>
+            <div id="timer-container" class="poppins-regular"> 
+                <div id="timer">00:00</div>
+            </div>
+    </div>
+
+
+    <button type="submit" class="submit-button" id="submitBtn">Submit</button>
+
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function () {
+            let pages = ["ai-screen.html", "ai-screen2.html","ai-screen3.html"]; 
+            let randomPage = pages[Math.floor(Math.random() * pages.length)];
+            window.open(randomPage, "_blank");
+        });
+    </script>
+
+
+    </div>
+</body>
